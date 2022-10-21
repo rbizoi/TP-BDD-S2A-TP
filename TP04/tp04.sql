@@ -62,8 +62,8 @@ with check option;
 
 
 update representants
-set fonction = 'Assistante commerciale'
-where  
+set fonction = 'Assistante commerciale';
+
 
 insert into representants
 values (112, Null, 'Grangirard', 'Patricia', 'Assistante commerciale',
