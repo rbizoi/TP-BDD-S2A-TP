@@ -24,12 +24,21 @@ where pays = 'France';
 
 grant select on representants to stag02;
 grant select on ventes_a to stag02;
+revoke select on ventes_a from stag02; 
+
+
+create or replace view ventes_a
+as 
+select annee, trimestre, mois, 
+       sum(quantite) quantite,
+       sum(quantite*prix_unitaire) ca
+from commandes join details_commandes using(no_commande)
+group by annee, trimestre, mois;
 
 select * from ventes_a
-order by 1,2,3
+order by 1,2,3;
 
 grant select on ventes_a to stag02;
-
 
 create or replace view representants 
 as 
