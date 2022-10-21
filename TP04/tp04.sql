@@ -50,3 +50,13 @@ FROM
     employes
 where fonction like 'Rep%'
 with check option;
+
+
+update representants
+set fonction = 'Assistante commerciale'
+where  
+
+insert into representants
+values (112, Null, 'Grangirard', 'Patricia', 'Assistante commerciale',
+'Mme',to_date('04/04/1977','dd/mm/yyyy'), 
+to_date('09/02/2000','dd/mm/yyyy'), 1700, Null, Null, Null);
