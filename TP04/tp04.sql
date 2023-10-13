@@ -17,12 +17,13 @@ FROM
     employes
 where fonction like 'Rep%';
 
+
+select * from representants;
+
 update representants set salaire = salaire * 1.1
 where pays = 'France';
 
-
-
-grant select on representants to stag02;
+grant select,INSERT, UPDATE, DELETE on representants to stag02;
 grant select on ventes_a to stag02;
 revoke select on ventes_a from stag02; 
 
