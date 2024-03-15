@@ -74,6 +74,8 @@ SELECT * FROM  COMMANDES;
 
 COMMIT;
 
+alter table commandes add nouvelle_col varchar(40);
+
 SELECT TABLE_NAME,
        COLUMN_NAME ,
        DATA_TYPE,
